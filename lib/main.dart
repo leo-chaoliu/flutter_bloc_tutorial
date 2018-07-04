@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:bloc_example/movie_service.dart';
-import 'package:bloc_example/provider.dart';
+import 'package:bloc_example/movie_provider.dart';
 import 'package:bloc_example/movie_bloc.dart';
 
 void main() => runApp(MyApp());
