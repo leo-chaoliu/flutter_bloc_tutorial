@@ -3,7 +3,7 @@ import 'dart:convert';
 // import 'package:http/http.dart' as http;
 
 import 'package:bloc_example/constant.dart';
-import 'package:bloc_example/model.dart';
+import 'package:bloc_example/movie_model.dart';
 import 'package:bloc_example/api.dart';
 
 class MovieService {

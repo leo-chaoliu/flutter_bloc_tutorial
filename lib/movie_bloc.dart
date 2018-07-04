@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:rxdart/rxdart.dart';
 
 import 'package:bloc_example/movie_service.dart';
-import 'package:bloc_example/model.dart';
+import 'package:bloc_example/movie_model.dart';
 
 class MovieBloc {
   final MovieService movieService;

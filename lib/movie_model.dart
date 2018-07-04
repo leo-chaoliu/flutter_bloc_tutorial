@@ -1,3 +1,4 @@
+// POJO class
 class Movie {
   final String title, posterPath, overview;
 
