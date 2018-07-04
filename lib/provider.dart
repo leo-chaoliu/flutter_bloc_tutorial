@@ -1,7 +1,7 @@
-import 'package:bloc_example/model.dart';
-import 'package:bloc_example/bloc.dart';
-
 import 'package:flutter/widgets.dart';
+
+import 'package:bloc_example/movie_service.dart';
+import 'package:bloc_example/movie_bloc.dart';
 
 class MovieProvider extends InheritedWidget {
   final MovieBloc movieBloc;
@@ -14,6 +14,6 @@ class MovieProvider extends InheritedWidget {
           .movieBloc;
 
   MovieProvider({Key key, MovieBloc movieBloc, Widget child})
-      : this.movieBloc = movieBloc ?? MovieBloc(API()),
+      : this.movieBloc = movieBloc ?? MovieBloc(MovieService()),
         super(child: child, key: key);
 }

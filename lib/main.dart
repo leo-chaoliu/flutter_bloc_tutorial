@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:bloc_example/movie_service.dart';
 import 'package:bloc_example/provider.dart';
-import 'package:bloc_example/model.dart';
-import 'package:bloc_example/bloc.dart';
+import 'package:bloc_example/movie_bloc.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MovieProvider(
-      movieBloc: MovieBloc(API()),
+      movieBloc: MovieBloc(MovieService()),
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(),
@@ -42,6 +42,7 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           StreamBuilder(
+            // format res form BloC
             stream: movieBloc.log,
             builder: (context, snapshot) => Container(
                   child: Text(snapshot?.data ?? ''),
