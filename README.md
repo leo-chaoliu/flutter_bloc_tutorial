@@ -1,10 +1,21 @@
-# flutter_bloc_tutorial
+## BloC
 
-### In this tutorial, we build an application using the BLoC pattern.
+-A complex model have
 
-### To build this application, you will need the latest version of the flutter preview build and Dart 2.0 SDK for more information, [click here](https://github.com/flutter/flutter/wiki/Trying-the-preview-of-Dart-2-in-Flutter)
-### Check out the Youtube Tutorial for this [Dart Flutter Program](https://youtu.be/ALcbTxz3bUw). Here is our [Youtube Channel](https://www.youtube.com/channel/UCYqCZOwHbnPwyjawKfE21wg) Subscribe for more content.
+1.  As usual:
+    1.1 a POJO class (the model itself)
+    1.2 a service
+    Talk to the Api,
+    Deal with response from server side, like decode json...
+    Can be inside the Model class as its functions
 
-### Check out our blog at [tensor-programming.com](http://tensor-programming.com/).
+2.  MVVM Pattern/Reactive Programming in flutter:
+    a BloC (Biz Logic component)
+    It's like MVVM pattern
+    ViewModel((BloC)) - Model
+    View - ViewModel
 
-### Our [Twitter](https://twitter.com/TensorProgram), our [facebook](https://www.facebook.com/Tensor-Programming-1197847143611799/) and our [Steemit](https://steemit.com/@tensor).
+        StreamController will Listen to the view as a stream
+        Triger the service to get the formatted data
+        Handle the biz logic with the data stream
+        Pass to the View Obj - Stream
